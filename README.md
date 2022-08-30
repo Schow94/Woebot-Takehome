@@ -25,6 +25,8 @@ URL = https://woebot-59455.web.app/
 URL = https://woebot-api.herokuapp.com
 
 ### Flow Chart
+![Woebot Auth Chart](https://user-images.githubusercontent.com/24352472/187494443-4c219375-dc26-4d4b-be1b-3b8cacb1cb25.jpeg)
+
 
 ### Build Instructions
 
