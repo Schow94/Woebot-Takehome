@@ -24,19 +24,19 @@ Write a simple web application that allow users to register for accounts.
 <img width="2559" alt="Screen Shot 2022-08-30 at 9 50 47 AM" src="https://user-images.githubusercontent.com/24352472/187495142-f6b1381a-5542-4350-b9b0-009d413795b3.png">
 <img width="2555" alt="Screen Shot 2022-08-30 at 9 32 04 AM" src="https://user-images.githubusercontent.com/24352472/187495154-a4c8fa2a-1d77-4f27-921f-878026b4ffc1.png">
 
-
-
 ### Client
 
-URL = https://woebot-59455.web.app/
+- Frontend deployed on Firebase
+- URL = https://woebot-59455.web.app/
 
 ### API
 
-URL = https://woebot-api.herokuapp.com
+- Backend & Postgres db eployed on Heroku
+- URL = https://woebot-api.herokuapp.com
 
 ### Flow Chart
-![Woebot Auth Chart](https://user-images.githubusercontent.com/24352472/187494443-4c219375-dc26-4d4b-be1b-3b8cacb1cb25.jpeg)
 
+![Woebot Auth Chart](https://user-images.githubusercontent.com/24352472/187494443-4c219375-dc26-4d4b-be1b-3b8cacb1cb25.jpeg)
 
 ### Build Instructions
 
