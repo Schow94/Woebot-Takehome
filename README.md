@@ -60,6 +60,14 @@ Write a simple web application that allow users to register for accounts.
 
 ### Build Instructions
 
+##### My coding environment
+
+- Homebrew version: 3.5.9
+- nvm version: 0.37.2
+- node version: v17.5.0
+- npm version: 8.4.1
+- postgres version: PostgreSQL 14.2
+
 #### Client
 
 - npm install (if package.json present)
@@ -77,6 +85,6 @@ Write a simple web application that allow users to register for accounts.
 - npm install -g nodemon
 - URL: localhost:8000/users
 
-##### Command to run from root of /client directory
+##### Command to run from root of /api directory
 
 - nodemon app.js
