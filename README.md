@@ -68,6 +68,10 @@ Write a simple web application that allow users to register for accounts.
 - npm version: 8.4.1
 - postgres version: PostgreSQL 14.2
 
+##### Clone repo
+
+- $ git clone https://github.com/Schow94/Woebot-Takehome.git
+
 #### Client
 
 - npm install (if package.json present)
@@ -84,6 +88,50 @@ Write a simple web application that allow users to register for accounts.
 - Alternatively npm install bcrypt body-parser cors dotenv express jsonwebtoken morgan pg
 - npm install -g nodemon
 - URL: localhost:8000/users
+
+##### Create .env file in root of project directory
+
+- Add 'DATABASE_URL=YOUR_DATABASE_URL_GOES_HERE' to .env file
+- Add 'SECRET=RANDOM_SECRET_THATS_UP_TO_YOU' to .env file
+
+##### To use db deployed to Heroku
+
+- In /db/index.js uncomment line 7 "ssl: { rejectUnauthorized: false }"
+- In /db/index.js uncomment line 9 "connectionString: process.env.DATABASE_URL"
+
+##### To use local db on machine
+
+- Create a Postgres db & users table on local machine
+- Uncomment line 5 in /db/index.js "ssl: process.env.DATABASE_URL ? true : false"
+- Comment out line 7 in db/index.js "sl: process.env.DATABASE_URL ? true : false"
+- Uncommment lines 9-11 in db/index.js "connectionString:
+  process.env.DATABASE_URL ||
+  "postgres://stephenchow@localhost:5432/woebot_takehome"," and insert to your credentials
+
+##### Create Postgres db
+
+- CREATE DATABASE woebot_takehome;
+
+##### Create Postgres table
+
+- CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username TEXT UNIQUE,
+  password TEXT,
+  email TEXT UNIQUE
+  );
+
+##### Example command to manually insert into users table
+
+INSERT INTO users (
+username,
+email,
+password
+) VALUES (
+'test',
+'test@test.com',
+'testPassword'
+);
 
 ##### Command to run from root of /api directory
 
