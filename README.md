@@ -102,7 +102,8 @@ Write a simple web application that allow users to register for accounts.
 ##### To use local db on machine
 
 - Create a Postgres db & users table on local machine
-- Uncomment line 5 in /db/index.js "ssl: process.env.DATABASE_URL ? true : false"
+- Make sure there's no DATABASE_URL in .env file
+- Comment out line 5 in /db/index.js "ssl: process.env.DATABASE_URL ? true : false"
 - Comment out line 7 in db/index.js "ssl: { rejectUnauthorized: false }"
 - Uncommment lines 9-11 in db/index.js "connectionString:
   process.env.DATABASE_URL || 'postgres://stephenchow@localhost:5432/woebot_takehome'," and insert to your credentials
