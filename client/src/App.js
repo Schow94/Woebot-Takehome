@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import axios from "axios";
 import jwt_decode from "jwt-decode";
 
@@ -20,7 +20,7 @@ function App() {
 	const [loginMsg, setLoginMsg] = useState("");
 
 	/*
-		-Signup w/ POST request to "api/signup"
+		-Signup w/ POST request to "/api/signup"
 	*/
 	const signup = async (credentials) => {
 		// POST request
@@ -50,13 +50,14 @@ function App() {
 		localStorage.setItem("exp", exp);
 		localStorage.setItem("username", username);
 
+		// Save username to state
 		setCurrUser(username);
 		// Redirect user to homepage
 		history("/");
 	};
 
 	/*
-		-Signup w/ POST request to "api/signup"
+		-Signup w/ POST request to "/api/login"
 	*/
 	const login = async (credentials) => {
 		// POST request
@@ -69,13 +70,14 @@ function App() {
 			},
 		});
 
-		// Grab token off of payload
 		const data = res.data;
 
+		// Save login msg to state if there's an error logging in
 		if (data.message) {
 			setLoginMsg(data.message);
 		}
 
+		// Grab token off of payload
 		const token = data.token;
 		// Decode token
 		const decoded = jwt_decode(token);
@@ -89,6 +91,8 @@ function App() {
 		localStorage.setItem("iat", iat);
 		localStorage.setItem("exp", exp);
 		localStorage.setItem("username", username);
+
+		// Save current user to state
 		setCurrUser(username);
 		// Redirect user to homepage
 		history("/");
@@ -96,21 +100,23 @@ function App() {
 
 	/*
 		- Check credentials in local storage on component initial mount
-		- TODO: check if token is expired
 	*/
 	const checkCredentials = () => {
 		// Retrieve credentials from local storage
 		const username = localStorage.getItem("username");
 
-		// Set current user in state
+		// Set current user in state if username exists in localStorage
 		if (username) {
 			setCurrUser(username);
 		}
 
 		// Remove token from localStorage if expired
 		const exp = localStorage.getItem("exp");
+
 		// Curr date
 		const date = new Date() / 1000;
+
+		// Logout if token is expired
 		if (exp < date) {
 			logout();
 		}
@@ -120,10 +126,13 @@ function App() {
 		- Logout by removing token from localStorage
 	*/
 	const logout = () => {
+		// Remove all data from localStorage
 		localStorage.removeItem("token");
 		localStorage.removeItem("iat");
 		localStorage.removeItem("exp");
 		localStorage.removeItem("username");
+
+		// Clear any users from state
 		setCurrUser("");
 	};
 
@@ -134,6 +143,7 @@ function App() {
 	const getUsers = async () => {
 		// Retrieve token from localStorage
 		const token = localStorage.getItem("token");
+
 		// GET request
 		const res = await axios({
 			method: "GET",
@@ -142,6 +152,8 @@ function App() {
 		});
 
 		const usersArr = res.data;
+
+		// Save list of registered users to state
 		setUsers(usersArr);
 	};
 

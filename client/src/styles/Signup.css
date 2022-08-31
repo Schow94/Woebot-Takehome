@@ -101,7 +101,7 @@
 	}
 }
 
-/*  > 2400px - Horizontal */
+/*  < 2400px - Horizontal */
 @media only screen and (min-width: 2400px) {
 	.signup-form {
 		width: 40%;

@@ -66,8 +66,17 @@ Write a simple web application that allow users to register for accounts.
 - Alternatively npm install react-router-dom axios jwt-decode
 - URL: localhost:3000/
 
+##### Command to run from root of /client directory
+
+- npm start
+
 #### API
 
 - npm install (if package.json present)
 - Alternatively npm install bcrypt body-parser cors dotenv express jsonwebtoken morgan pg
+- npm install -g nodemon
 - URL: localhost:8000/users
+
+##### Command to run from root of /client directory
+
+- nodemon app.js

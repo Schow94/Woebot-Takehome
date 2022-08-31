@@ -11,25 +11,26 @@
 @media only screen and (min-width: 400px) and (max-width: 800px) {
 }
 
-/* <= 1200px - Horizontal */
+/* 800-1200px - Horizontal */
 @media only screen and (min-width: 800px) and (max-width: 1200px) {
 }
 
-/* <= 1600px - Horizontal */
+/* 1200-1600px - Horizontal */
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
 }
 
-/* <= 2000px - Horizontal */
+/* 1600-2000px - Horizontal */
 @media only screen and (min-width: 1600px) and (max-width: 2000px) {
 }
 
-/* <= 2400px - Horizontal */
+/* 2000-2400px - Horizontal */
 @media only screen and (min-width: 2000px) and (max-width: 2400px) {
 }
 
-/* <= 2400px - Horizontal */
+/* 2400-2800px - Horizontal */
 @media only screen and (min-width: 2400px) and (max-width: 2800px) {
 }
 
+/* >= 2800px - Horizontal */
 @media only screen and (min-width: 2800px) {
 }

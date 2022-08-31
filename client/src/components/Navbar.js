@@ -4,14 +4,19 @@ import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const Navbar = ({ logout, currUser }) => {
+	/*
+		- Log user out
+	*/
 	const handleLogout = () => {
 		logout();
 	};
+
 	return (
 		<div className="nav-container">
 			<Link to="/">
 				<img className="logo" src={"logo.svg"} alt="React Logo" />
 			</Link>
+
 			<nav className="navbar">
 				<li className="nav-link current-user">
 					{currUser ? `Logged in as ${currUser}` : ``}

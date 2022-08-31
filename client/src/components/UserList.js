@@ -1,22 +1,13 @@
 import React from "react";
 
+import Mother from "./Mother";
+
 import "../styles/UserList.css";
 
 const UserList = ({ users }) => {
 	return (
 		<div className="user-list-container">
-			<div className="mother-img-container">
-				<div className="text-container">
-					<h1>A reliable ally you can trust</h1>
-					<p>
-						Woebot’s ability to form close relationships helps make our
-						solutions highly engaging. In as little as 3 to 5 days Woebot has
-						been shown to form a trusted bond with users.
-					</p>
-					<button className="read-study-btn">I want to read the study</button>
-				</div>
-				<img className="mother-img" src="mother.jpeg" alt="mother" />
-			</div>
+			<Mother />
 
 			<div className="users">
 				<h3>Registered Users:</h3>
@@ -28,9 +19,6 @@ const UserList = ({ users }) => {
 									<p>Username: {x.username}</p>
 									<p>Email: {x.email}</p>
 								</li>
-								{/* <div className="divider-container">
-									<hr className="divider" />
-								</div> */}
 							</>
 						);
 					})}
