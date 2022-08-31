@@ -42,4 +42,12 @@ Write a simple web application that allow users to register for accounts.
 
 #### Client
 
+- npm install (if package.json present)
+- Alternatively npm install react-router-dom axios jwt-decode
+- URL: localhost:3000/
+
 #### API
+
+- npm install (if package.json present)
+- Alternatively npm install bcrypt body-parser cors dotenv express jsonwebtoken morgan pg
+- URL: localhost:8000/users
