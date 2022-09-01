@@ -85,20 +85,26 @@
 
 /* ------------------------------------ MEDIA QUERIES ------------------------------------ */
 /* 400-800px - Horizontal */
-@media only screen and (min-width: 400px) and (max-width: 800px) {
+@media only screen and (min-width: 375px) and (max-width: 800px) {
 	.user-list-container {
 		display: flex;
 		flex-direction: column;
 		margin-top: 30%;
+		height: 80%;
 	}
 
 	.mother-img-container {
-		width: 90%;
+		width: 95%;
 		margin-bottom: 1em;
 	}
 
 	.users {
-		width: 90%;
+		width: 100%;
+	}
+
+	.user-list-item {
+		width: 95%;
+		font-size: 0.8em;
 	}
 }
 
@@ -112,7 +118,9 @@
 		height: 60%;
 		flex-direction: column-reverse;
 	}
-
+	.users {
+		width: 100%;
+	}
 	.mother-img {
 		width: 50%;
 	}
@@ -120,6 +128,10 @@
 	.text-container {
 		width: 60%;
 		line-height: 30px;
+	}
+	.user-list-item {
+		width: 95%;
+		font-size: 1em;
 	}
 }
 
