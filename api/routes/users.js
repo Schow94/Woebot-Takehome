@@ -1,4 +1,5 @@
 const express = require("express");
+// Mini app
 const router = express.Router();
 const db = require("../db");
 const bcrypt = require("bcrypt");
@@ -8,10 +9,12 @@ require("dotenv").config();
 const SECRET = process.env.SECRET;
 
 // ------------------------ EXPRESS MIDDLEWARES --------------------------
-// Check if user's token is valid
+/*
+	- Check if user's token is valid before ALL requests
+*/
 const isLoggedIn = async (req, res, next) => {
 	try {
-		// Slice to remove 'Bearer' in front of our token
+		// Remove 'Bearer' from token
 		const authHeaderValue = req.headers.authorization.slice(7);
 
 		// Verify that token is valid
@@ -63,7 +66,7 @@ router.post("/signup", async (req, res, next) => {
 			[req.body.username, req.body.email, hashedPassword]
 		);
 
-		// Sign token w/ username
+		// Create token & include username
 		const token = jwt.sign(
 			{
 				username: req.body.username,
@@ -103,11 +106,11 @@ router.post("/login", async (req, res, next) => {
 		);
 
 		// invalid pw
-		if (verifiedPw === false) {
+		if (!verifiedPw) {
 			return res.json({ message: "Invalid Password" });
 		}
 
-		// Credentials were valid
+		// Valid Credentials - Create token & include username
 		const token = jwt.sign({ username: foundUser.rows[0].username }, SECRET, {
 			expiresIn: 60 * 60,
 		});

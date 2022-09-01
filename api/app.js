@@ -17,7 +17,7 @@ app.use(morgan("tiny"));
 // Parse all requests before handlers. Puts data on req.body
 app.use(bodyParser.json());
 
-// --------------------------------------- Routes ----------------------------------
+// --------------------------------------- ROUTES ----------------------------------
 app.use("/users", userRoutes);
 
 // ---------------------------- ERROR HANDLING ------------------------
