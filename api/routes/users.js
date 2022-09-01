@@ -120,28 +120,3 @@ router.post("/login", async (req, res, next) => {
 });
 
 module.exports = router;
-
-/*
-	============== Create Database on Heroku/local ==============
-		CREATE DATABASE woebot_takehome;
-
-	============== Create table ==============
-		CREATE TABLE users (
-			id SERIAL PRIMARY KEY,
-			username TEXT UNIQUE,
-			password TEXT,
-			email TEXT UNIQUE
-		);
-
-	============== Insert into table ==============
-		INSERT INTO users (
-			username,
-			email,
-			password
-		) VALUES (
-			'admin',
-			'admin@admin.com',
-			'password'
-		);
-
-*/
