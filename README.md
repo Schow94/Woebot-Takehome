@@ -89,6 +89,10 @@ Write a simple web application that allow users to register for accounts.
 - npm install -g nodemon
 - URL: localhost:8000/users
 
+##### Command to run from root of /api directory
+
+- nodemon app.js
+
 ##### Create .env file in root of project directory
 
 - Add 'DATABASE_URL=YOUR_DATABASE_URL_GOES_HERE' to .env file
@@ -132,7 +136,3 @@ password
 'test@test.com',
 'testPassword'
 );
-
-##### Command to run from root of /api directory
-
-- nodemon app.js

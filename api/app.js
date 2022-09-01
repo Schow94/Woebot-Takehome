@@ -38,7 +38,7 @@ app.use((err, req, res, next) => {
 	});
 });
 
-// App listens on PORT 8000 or dev
+// App listens on PORT 8000 or prod
 app.listen(PORT, () => {
 	if (app.get("env") === "development") {
 		console.log(`Listening on PORT: ${PORT}`);
