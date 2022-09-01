@@ -63,14 +63,24 @@
 
 /* ------------------------------------ MEDIA QUERIES ------------------------------------ */
 /* 400-800px - Horizontal */
-@media only screen and (min-width: 400px) and (max-width: 800px) {
+@media only screen and (min-width: 375px) and (max-width: 800px) {
 	.login-form {
-		width: 80%;
+		width: 90%;
 		height: 70%;
+		font-size: 12px;
 	}
 
 	.login-input {
 		width: 70%;
+	}
+
+	.invalid-container {
+		text-align: center;
+		font-size: 1em;
+	}
+
+	.button {
+		width: 80%;
 	}
 }
 

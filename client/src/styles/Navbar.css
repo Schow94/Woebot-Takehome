@@ -249,7 +249,7 @@
 	}
 }
 
-/* 1600-2000px - Horizontal */
+/* >= 2400px - Horizontal */
 @media only screen and (min-width: 2400px) {
 	.logo {
 		width: 12%;
@@ -266,8 +266,7 @@
 		height: 50px;
 		font-size: 1.2em;
 	}
-
-	.logout-btn {
+	ß .logout-btn {
 		width: 100px;
 		height: 50px;
 	}

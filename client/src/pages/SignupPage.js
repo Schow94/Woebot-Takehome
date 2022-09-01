@@ -17,7 +17,7 @@ const SignupPage = ({ signup, currUser, history }) => {
 
 	return (
 		<div className="signup-container">
-			<h1>Sign up</h1>
+			<h1 className="signup-header">Sign up</h1>
 
 			<SignupForm signup={signup} />
 		</div>
