@@ -77,111 +77,203 @@
 }
 
 /* ------------------------------------ MEDIA QUERIES ------------------------------------ */
-/* <= 800px - Horizontal */
-@media screen and (max-width: 800px) {
-	.navbar {
-		width: 40%;
-		font-size: 8px;
-	}
-
-	.nav-link {
-		font-size: 8px;
-	}
-
+/* 400-800px - Horizontal */
+@media only screen and (min-width: 375px) and (max-width: 600px) {
 	.logo {
-		width: 15%;
-		margin-top: 1.5em;
+		width: 0%;
+	}
+
+	.navbar {
+		font-size: 4px;
+		width: 100%;
 	}
 
 	.partner {
-		width: 110px;
-		border-radius: 20px;
-		height: 30px;
-		font-size: 8px;
+		width: 50px;
+		height: 20px;
+	}
+
+	.logout-btn {
+		width: 40px;
+		height: 20px;
 	}
 
 	.login-btn {
-		width: 50px;
-		height: 30px;
-		border-radius: 20px;
-		font-size: 8px;
+		width: 40px;
+		height: 20px;
 	}
 }
 
-/* <= 1200px - Horizontal */
-@media screen and (max-width: 1200px) {
-	.navbar {
-		width: 40%;
-		font-size: 12px;
-	}
-
-	.nav-link {
-		font-size: 12px;
-	}
-
+/* 600-800px - Horizontal */
+@media only screen and (min-width: 600px) and (max-width: 800px) {
 	.logo {
-		width: 15%;
-		margin-top: 1.5em;
+		width: 0%;
+		padding-top: 1.2em;
+	}
+
+	.navbar {
+		font-size: 8px;
+		width: 100%;
 	}
 
 	.partner {
-		width: 110px;
-		border-radius: 20px;
-		height: 30px;
-		font-size: 12px;
+		width: 60px;
+		height: 20px;
+		font-size: 0.9em;
+	}
+
+	.logout-btn {
+		width: 40px;
+		height: 20px;
 	}
 
 	.login-btn {
-		width: 50px;
-		height: 30px;
-		border-radius: 20px;
-		font-size: 12px;
+		width: 40px;
+		height: 20px;
 	}
 }
 
-/* <= 1600px - Horizontal */
-@media screen and (max-width: 1600px) {
-	.navbar {
-		width: 80%;
-		font-size: 14px;
-	}
-}
-
-/* <= 2000px - Horizontal */
-@media screen and (max-width: 2000px) {
-	.navbar {
-		width: 80%;
-		font-size: 14px;
-	}
-
-	.logo {
-		width: 15%;
-		margin-top: 1.5em;
-	}
-}
-
-/* <= 2400px - Horizontal */
-@media screen and (max-width: 2400px) {
-	.navbar {
-		width: 80%;
-		font-size: 14px;
-	}
-
-	.logo {
-		width: 15%;
-		margin-top: 1.5em;
-	}
-}
-
-/* <= 2400px - Horizontal */
-@media screen and (max-width: 2800px) {
-	.navbar {
-		width: 80%;
-		font-size: 14px;
-	}
-
+/* 800-1200px - Horizontal */
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
 	.logo {
 		width: 12%;
-		margin-top: 1.5em;
+		padding-top: 1.2em;
+	}
+
+	.navbar {
+		font-size: 10px;
+		width: 85%;
+	}
+
+	.partner {
+		width: 80px;
+		height: 30px;
+		font-size: 0.9em;
+	}
+
+	.logout-btn {
+		width: 60px;
+		height: 20px;
+	}
+
+	.login-btn {
+		width: 60px;
+		height: 30px;
+	}
+}
+
+/* 1200-1600px - Horizontal */
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+	.logo {
+		width: 12%;
+		padding-top: 0.8em;
+	}
+
+	.navbar {
+		font-size: 14px;
+		width: 85%;
+	}
+
+	.partner {
+		width: 110px;
+		height: 40px;
+		font-size: 0.9em;
+	}
+
+	.logout-btn {
+		width: 80px;
+		height: 40px;
+	}
+
+	.login-btn {
+		width: 80px;
+		height: 40px;
+	}
+}
+
+/* 1600-2000px - Horizontal */
+@media only screen and (min-width: 1600px) and (max-width: 2000px) {
+	.logo {
+		width: 12%;
+		padding-top: 0.8em;
+	}
+
+	.navbar {
+		font-size: 14px;
+		width: 85%;
+	}
+
+	.partner {
+		width: 110px;
+		height: 40px;
+		font-size: 0.9em;
+	}
+
+	.logout-btn {
+		width: 80px;
+		height: 40px;
+	}
+
+	.login-btn {
+		width: 80px;
+		height: 40px;
+	}
+}
+
+/* 2000-2400px - Horizontal */
+@media only screen and (min-width: 2000px) and (max-width: 2400px) {
+	.logo {
+		width: 12%;
+		padding-top: 0.8em;
+	}
+
+	.navbar {
+		font-size: 14px;
+		width: 85%;
+	}
+
+	.partner {
+		width: 110px;
+		height: 40px;
+		font-size: 0.9em;
+	}
+
+	.logout-btn {
+		width: 80px;
+		height: 40px;
+	}
+
+	.login-btn {
+		width: 80px;
+		height: 40px;
+	}
+}
+
+/* 1600-2000px - Horizontal */
+@media only screen and (min-width: 2400px) {
+	.logo {
+		width: 12%;
+		padding-top: 0.8em;
+	}
+
+	.navbar {
+		font-size: 14px;
+		width: 85%;
+	}
+
+	.partner {
+		width: 150px;
+		height: 50px;
+		font-size: 1.2em;
+	}
+
+	.logout-btn {
+		width: 100px;
+		height: 50px;
+	}
+
+	.login-btn {
+		width: 100px;
+		height: 50px;
 	}
 }
